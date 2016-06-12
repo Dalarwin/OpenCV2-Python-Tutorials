@@ -85,6 +85,8 @@ So we capture a video, process it frame-by-frame and we want to save that video.
 
 This time we create a **VideoWriter** object. We should specify the output file name (eg: output.avi). Then we should specify the **FourCC** code (details in next paragraph). Then number of frames per second (fps) and frame size should be passed. And last one is **isColor** flag. If it is True, encoder expect color frame, otherwise it works with grayscale frame.
 
+* Size used to create VideoWriter and size of frame must be the same.
+
 `FourCC <http://en.wikipedia.org/wiki/FourCC>`_ is a 4-byte code used to specify the video codec. The list of available codes can be found in `fourcc.org <http://www.fourcc.org/codecs.php>`_. It is platform dependent. Following codecs works fine for me.
 
 * In Fedora: DIVX, XVID, MJPG, X264, WMV1, WMV2. (XVID is more preferable. MJPG results in high size video. X264 gives very small size video)
